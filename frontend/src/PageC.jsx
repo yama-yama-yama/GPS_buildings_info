@@ -114,6 +114,7 @@ function PageC() {
       <h1>地磁気センサー (コンパス)</h1>
 
       {/* iOS 許可要求ボタン */}
+      {isIOS === false && <div>this is not ios</div>}
       {permissionState === "unknown" && (
         <div style={{ margin: "20px 0", padding: "15px", background: "#eef6ff", borderRadius: "10px", border: "1px solid #b6d4fe" }}>
           <p style={{ margin: "0 0 10px 0", fontSize: "14px" }}>

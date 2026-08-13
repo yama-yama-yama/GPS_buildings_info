@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/backend/(.*)",
-      "destination": "/backend/build/main.py"
+      "destination": "/backend/main.py"
     },
     {
       "source": "/(.*)",

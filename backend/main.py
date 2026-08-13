@@ -1,3 +1,13 @@
+import os
+import sys
+
+# VercelのPythonランタイムでは main.py を直接読み込むため、
+# 同ディレクトリのモジュール(testprogram3_json)が sys.path に無いことがある。
+# 自分の置かれているディレクトリを明示的に sys.path へ追加してから import する。
+_this_dir = os.path.dirname(os.path.abspath(__file__))
+if _this_dir not in sys.path:
+    sys.path.insert(0, _this_dir)
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field

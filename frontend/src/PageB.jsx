@@ -59,6 +59,7 @@ function PageB() {
             <button onClick={fetchGeoData}>geopyを実行</button>
             <button onClick={changePage}>pageAへ遷移</button>
             <button onClick={() => navigate('/PageC')}>pageCへ遷移</button>
+            <button onClick={() => navigate('/PageD')}>pageDへ遷移</button>
             {isVisible && <div>{data.status + "  " + data.message }</div>}
             {isVisible && <div>{data.llm_context}</div>}
         </div>

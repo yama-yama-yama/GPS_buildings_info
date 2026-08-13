@@ -218,6 +218,7 @@ function PageC() {
         >
           PageBへ
         </button>
+        <button onClick={() => navigate('/PageD')}>pageDへ遷移</button>
       </div>
     </div>
   );

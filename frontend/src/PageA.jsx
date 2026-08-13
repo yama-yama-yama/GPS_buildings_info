@@ -157,6 +157,7 @@ function PageA() {
         <button onClick={GetDirection}>差分</button>
         <button onClick={changePage}>pageBへ遷移</button>
         <button onClick={() => navigate('/PageC')}>pageCへ遷移</button>
+        <button onClick={() => navigate('/PageD')}>pageDへ遷移</button>
       </div>
 
       <hr style={{ margin: "20px 0" }} />

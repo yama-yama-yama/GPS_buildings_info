@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom'; // React Routerを使うため�
 function PageB() {
   const navigate = useNavigate();
   const [data, setData] = useState();
-  const url = "http://127.0.0.1:8000/";
+  const API_BASE = process.env.REACT_APP_API_URL || "/backend";
+  const url = `${API_BASE}/`;
   const [isVisible, setIsVisible] = useState(false);
 
   const GetData = () => {
@@ -25,9 +26,9 @@ function PageB() {
         facing: [0, 1],           // 方角: 北 (または "北", "N")                                       
         relative_command: "front" // 相対方向: "front", "back", "right", "left"                        
       };                                                                                               
-                                                                                                       
+                                                                                                        
       try {                                                                                            
-        const response = await fetch("http://localhost:8000/geoapi/", {                                
+        const response = await fetch(`${API_BASE}/geoapi/`, {
           method: "POST",                                                                              
           headers: {                                                                                   
             "Content-Type": "application/json",                                                        

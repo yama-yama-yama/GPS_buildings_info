@@ -50,14 +50,19 @@ class GeoRequest(BaseModel):
     }
 
 @app.get("/")
+@app.get("/backend/")
+@app.get("/backend")
 def root():
     return {
         "status": "online",
         "message": "Location Crawler API is running.",
-        "endpoint": "/geoapi/"
+        "endpoint": "/backend/geoapi/"
     }
 
 @app.post("/geoapi/")
+@app.post("/geoapi")
+@app.post("/backend/geoapi/")
+@app.post("/backend/geoapi")
 def geoapi(req: GeoRequest):
     """
     Reactフロントエンドから受け取ったJSONデータ(GeoRequest)を元に

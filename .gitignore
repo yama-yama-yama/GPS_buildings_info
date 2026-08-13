@@ -29,3 +29,5 @@ backend/venv/
 .venv
 ._pycache_
 /_pycache_
+.vercel
+.env*
